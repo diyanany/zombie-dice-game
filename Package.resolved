@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "GameDie",
+        "repositoryURL": "https://github.com/SwiftFMI/GameDie.git",
+        "state": {
+          "branch": null,
+          "revision": "4517b2c41d67ac73da5706230a42b44a05b1be4c",
+          "version": "1.0.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
