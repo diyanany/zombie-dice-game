@@ -9,7 +9,7 @@ public class Cup {
             return numberOfGreenDice + numberOfYellowDice + numberOfRedDice
         }
     }
-    public var cup: Array<Die<DieFace>>
+    public var cup: Array<(Die<DieFace>, String)>
 
     public init() {
         self.numberOfGreenDice = 6
@@ -22,13 +22,13 @@ public class Cup {
 }
 
 extension Cup {
-    public func draw(_ numberOfDice: Int = 3) -> Array<Die<DieFace>> {
-        var drawnDice: Array<Die<DieFace>> = []
+    public func draw(_ numberOfDice: Int = 3) -> Array<(Die<DieFace>, String)> {
+        var drawnDice: Array<(Die<DieFace>, String)> = []
         var count = numberOfDice
 
         while count > 0 {
             let randomNumber = Int.random(in: 0..<self.numberOfDice)
-            drawnDice.append(cup[randomNumber])
+            drawnDice.append((cup[randomNumber].0, cup[randomNumber].1))
             count = count - 1
         }
 
