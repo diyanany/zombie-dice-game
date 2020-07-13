@@ -2,8 +2,9 @@ public class Player {
     let name: String
     var score: Int = 0
     var lifes: Int = 3
+    var isFinishedTurn: Bool = true
 
-    init(name: String = "") {
+    public init(name: String = "") {
         self.name = name
     }
 }
