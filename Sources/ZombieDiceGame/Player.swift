@@ -1,10 +1,23 @@
 public class Player {
     let name: String
     var score: Int = 0
-    var lifes: Int = 3
+    var lives: Int = 3
+    var footprints: Int = 0
     var isFinishedTurn: Bool = true
 
     public init(name: String = "") {
         self.name = name
+    }
+}
+
+extension Player {
+    public func resetLifes() {
+        self.lives = 3
+    }
+}
+
+extension Player {
+    public func resetFootPrints() {
+        self.footprints = 0
     }
 }
