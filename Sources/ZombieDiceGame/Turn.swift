@@ -12,11 +12,11 @@ extension Turn {
         var drawnDice = cup.draw(3 - footprints.count)
         for footprint in footprints {
             switch footprint.1 {
-                case "It is a green die.":
+                case "It is a green 🎲.":
                     drawnDice.append(Dice.greenDie)
-                case "It is a yellow die.":
+                case "It is a yellow 🎲.":
                     drawnDice.append(Dice.yellowDie)
-                case "It is a red die.":
+                case "It is a red 🎲.":
                     drawnDice.append(Dice.redDie)
                 default: 
                     break

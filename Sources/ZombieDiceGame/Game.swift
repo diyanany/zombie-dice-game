@@ -12,12 +12,14 @@ extension Game {
     public func run() {
         while !self.isFinished {
             for player in self.players {
-                player.resetLives()
+                print("===")
+                print("Scores:")
+                for p in self.players {
+                    print("\(p.name) has \(p.score) points.")
+                }
                 print("It is \(player.name)'s turn")
 
-                print("\(player.name) has \(player.score) points.")
-                print("\(player.name) has \(player.lives) lives.")
-
+                player.resetLives()
                 var brainCounter: Int = 0
                 while player.isFinishedTurn {
                     
@@ -31,6 +33,8 @@ extension Game {
                             let turn = Turn()
                             let roll = turn.roll(player.drawnFootprints)
                             player.resetFootprints()
+                            print("===")
+                            print("Drawn dice:")
                             for item in roll {
                                print(item)
                                if item.0 == DieFace.brain {
@@ -43,7 +47,7 @@ extension Game {
                                    player.drawnFootprints.append(item)
                                }
                             }
-
+                            print("Result: \(brainCounter)x\(DieFace.brain.rawValue), \(3 - player.lives)x\(DieFace.shotgun.rawValue), \(player.drawnFootprints.count)x\(DieFace.footprints.rawValue)")
                             if player.lives <= 0 {
                                  player.isFinishedTurn = false
                                  print("\(player.name) got SHOTGUNNED!")
@@ -64,7 +68,7 @@ extension Game {
             }
             
             if self.isFinished {
-                print("\(self.winner) WINS!")
+                print("===\n\(self.winner) WINS!\n===")
             }
         }
     }

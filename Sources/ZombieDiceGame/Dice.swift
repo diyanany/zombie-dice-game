@@ -5,19 +5,19 @@ public class Dice {
        faces: Array(repeating: DieFace.brain, count: 3) + 
               Array(repeating: DieFace.shotgun, count: 1) + 
               Array(repeating: DieFace.footprints, count: 2)
-   ), color: "It is a green die.")
+   ), color: "It is a green 🎲.")
 
    public static let yellowDie = try! (die: Die(
        faces: Array(repeating: DieFace.brain, count: 2) + 
               Array(repeating: DieFace.shotgun, count: 2) + 
               Array(repeating: DieFace.footprints, count: 2)
-   ), color: "It is a yellow die.")
+   ), color: "It is a yellow 🎲.")
 
    public static let redDie = try! (die: Die(
        faces: Array(repeating: DieFace.brain, count: 1) + 
               Array(repeating: DieFace.shotgun, count: 3) + 
               Array(repeating: DieFace.footprints, count: 2)
-   ), color: "It is a red die.")
+   ), color: "It is a red 🎲.")
 
     public init() {}
 }
