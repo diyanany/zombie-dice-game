@@ -3,7 +3,7 @@ public class Game {
     var isFinished: Bool = false
     var winner: String = "" 
 
-    public init(_ players: Player...) {
+    public init(_ players: [Player]) {
         self.players = players
     }
 }
@@ -23,6 +23,8 @@ extension Game {
                 var brainCounter: Int = 0
                 while player.isFinishedTurn {
                     
+                    print("Enter \"roll\" to Keep Going or \"finish\" to Stop and Score.")
+
                     let command = readLine() 
 
                     switch command {
@@ -36,7 +38,7 @@ extension Game {
                             print("===")
                             print("Drawn dice:")
                             for item in roll {
-                               print(item)
+                               print("\(item.0) \(item.1)")
                                if item.0 == DieFace.brain {
                                    brainCounter = brainCounter + 1
                                }
