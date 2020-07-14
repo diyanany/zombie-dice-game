@@ -11,7 +11,7 @@ public class Player {
 }
 
 extension Player {
-    public func resetLifes() {
+    public func resetLives() {
         self.lives = 3
     }
 }
@@ -19,5 +19,11 @@ extension Player {
 extension Player {
     public func resetFootPrints() {
         self.footprints = 0
+    }
+}
+
+extension Player {
+    public func isWinner() -> Bool {
+        return score >= 13
     }
 }
