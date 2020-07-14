@@ -1,3 +1,4 @@
+/// This enumaration represents different faces of the die.
 public enum DieFace: String, CustomStringConvertible {
     case brain = "🧠"
     case shotgun = "💥"

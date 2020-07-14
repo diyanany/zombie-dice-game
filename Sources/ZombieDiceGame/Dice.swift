@@ -1,5 +1,6 @@
 import GameDie
 
+/// This class implements the different number of faces for each die color. 
 public class Dice {
    public static let greenDie = try! (die: Die(
        faces: Array(repeating: DieFace.brain, count: 3) + 
