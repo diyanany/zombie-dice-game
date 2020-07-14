@@ -25,9 +25,13 @@ After you run the game enter the number of players(2 - 8). Enter a name for each
 - `finish`: to end your turn.
 ### About the dice
 There are three types of dice in three colors(6 green dice, 4 yellow dice and 3 red dice):
+
 green dice - 3x🧠2x💥1x👣
+
 yellow dice - 2x🧠2x💥2x👣
+
 red dice - 1x🧠2x💥3x👣
+
 - 🧠 - you ate your victim's brain! When face on the drawn dice has this symbol, you win 1 point for your current turn. Your current points are added to your total points after the end of your turn(this is when you type `finish`).
 - 💥 - he fought back! If you rolled three shotguns, your turn is over and your current points are lost. Otherwise, you can choose to stop and score `finish`, or continue `roll`.
 - 👣 - your victim escaped. When one or more drawn dice has a face with this symbol, they will be included in the next `roll` authomatically. You should be very careful with this symbol. Why? Because of the color of the dice.
