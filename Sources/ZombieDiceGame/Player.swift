@@ -1,9 +1,11 @@
+import GameDie
+
 public class Player {
     let name: String
     var score: Int = 0
     var lives: Int = 3
-    var footprints: Int = 0
     var isFinishedTurn: Bool = true
+    var drawnFootprints: Array<(DieFace, String)> = []
 
     public init(name: String = "") {
         self.name = name
@@ -17,8 +19,8 @@ extension Player {
 }
 
 extension Player {
-    public func resetFootPrints() {
-        self.footprints = 0
+    public func resetFootprints() {
+        self.drawnFootprints = []
     }
 }
 

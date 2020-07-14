@@ -20,16 +20,17 @@ extension Game {
 
                 var brainCounter: Int = 0
                 while player.isFinishedTurn {
+                    
                     let command = readLine() 
+
                     switch command {
                         case "finish":
-                            print("finish")
                             player.score = player.score + brainCounter
                             player.isFinishedTurn = false
                         case "roll":
-                            print("roll")
                             let turn = Turn()
-                            let roll = turn.roll(3)
+                            let roll = turn.roll(player.drawnFootprints)
+                            player.resetFootprints()
                             for item in roll {
                                print(item)
                                if item.0 == DieFace.brain {
@@ -39,7 +40,7 @@ extension Game {
                                    player.lives = player.lives - 1
                                }
                                else if item.0 == DieFace.footprints{
-                                   player.footprints = player.footprints + 1
+                                   player.drawnFootprints.append(item)
                                }
                             }
 
@@ -47,8 +48,6 @@ extension Game {
                                  player.isFinishedTurn = false
                                  print("\(player.name) got SHOTGUNNED!")
                             }
-                        case "draw":
-                            print("draw")
                         default:
                             print("Unknown command!")
                     }
@@ -57,7 +56,7 @@ extension Game {
                 player.isFinishedTurn = true
                 if !self.isFinished {
                     self.isFinished = player.isWinner()
-                    
+
                     if self.isFinished {
                         self.winner = player.name
                     }
