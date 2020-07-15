@@ -24,6 +24,12 @@ public class Player {
 }
 
 extension Player {
+    public func resetScore() {
+        self.score = 0
+    }
+}
+
+extension Player {
     public func resetLives() {
         self.lives = 3
     }

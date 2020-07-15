@@ -88,6 +88,16 @@ extension Game {
             
             if self.isFinished {
                 print("===\n\(self.winner) WINS!\n===")
+                print("Play again with the same players?\nEnter yes or no.")
+                let playAgain = readLine()
+                if(playAgain == "yes"){
+                    self.isFinished = false
+                    for player in self.players {
+                        player.resetScore()
+                        player.resetLives()
+                        player.resetFootprints()
+                    }
+                }
             }
         }
     }
